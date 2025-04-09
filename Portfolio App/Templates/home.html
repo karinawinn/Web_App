@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Karina Winn</h1>
+    <p>Hello! I am a senior studying physics and programming at BYU-Idaho. On this site you 
+        can explore the projects that I have worked on during my time as a student. Enjoy!</p>
+    <center><img src="{{url_for('static', filename='MyPicture.jpeg')}}" class="img-fluid" width="500" height="600"></center>
+    <p>  </p>
+    <center>
+    <a href="{{ url_for('subject', subject='physics') }}">
+        <button class="btn btn-outline-info">Physics</button>
+    </a>
+    
+    <a href="{{ url_for('subject', subject='programming') }}">
+        <button class="btn btn-outline-info">Programming</button>
+    </a>
+    </center>
+    <footer><p>  </p></footer>
+{% endblock content %}

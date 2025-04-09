@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block content %}
+    <head>
+        <title>{{ project.title }}</title>
+    </head>
+    <body>
+        <h1>{{ project.title }}</h1>
+        <center><img src="{{url_for('static', filename=project.image)}}" alt="{{ project.title }}" class="img-fluid" width="800"></center>   
+        <p>{{ project.summary }}</p>
+        <a href="{{ project.github }}" target="_blank">
+            <button class="btn btn-outline-info">View on GitHub</button>
+        </a>
+        <p>  </p>
+        <h2>Comments</h2>
+        <div>
+            {% for c in comments %}
+                <div>
+                    <p>{{ c.name }}: {{ c.comment }}</p>
+                </div>
+            {% endfor %}
+        </div>
+        <h3>Leave a Comment</h3>
+        {% if error %}
+            <p style="color:red;">{{ error }}</p>
+        {% endif %}
+        <form method="POST">
+            <label>Name:</label>
+            <input type="text" name="name">
+            <label>Comment:</label>
+            <input type="text" name="comment">
+            <button class="btn btn-outline-info" type="submit">Submit</button>
+        </form>
+        <p>  </p>
+        <a href="{{ url_for('subject', subject=subject) }}">
+            <button class="btn btn-outline-info">Back to {{ subject.capitalize() }} Projects</button>
+        </a>
+        <p>  </p>
+    </body>
+{% endblock content %}

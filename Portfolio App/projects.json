@@ -1,0 +1,18 @@
+{
+    "physics": [
+        {
+            "title": "Advanced Projectile Motion Simulation",
+            "summary": "Wrote a program to calculate the trajectory of a custom projectile including various forces.",
+            "image": "Projectile Motion Program.jpg",
+            "github": "https://github.com/karinawinn/cse210-projects/tree/main/final/FinalProject"
+        }
+    ],
+    "programming": [
+        {
+            "title": "To-Do List Web Application",
+            "summary": "Worked with a team to create a to-do list application with user authentication.",
+            "image": "ToDo App Login.png",
+            "github": "https://github.com/mwhepworth1/cse310-s1-cloud-databases"
+        }
+    ]
+}
